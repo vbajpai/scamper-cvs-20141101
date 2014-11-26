@@ -257,6 +257,7 @@ static void usage(uint32_t opt_mask)
       usage_line("text: output results in plain text for interactive use");
       usage_line("warts: output results in warts format for science");
       usage_line("json: output results in json format, better to use warts");
+      usage_line("csv: output results in csv format, better to use warts");
       usage_line("outcopy: output copy of all results collected to file");
       usage_line("dlts: use timestamps from datalink layer where possible");
       usage_line("tsps: input file for ping -T tsprespec=%s");
@@ -543,6 +544,8 @@ static int check_options(int argc, char *argv[])
 	  else if(strcasecmp(optarg, "warts") == 0)
 	    outtype = optarg;
 	  else if(strcasecmp(optarg, "json") == 0)
+	    outtype = optarg;
+	  else if(strcasecmp(optarg, "csv") == 0)
 	    outtype = optarg;
 	  else if(strcasecmp(optarg, "tsps") == 0)
 	    intype = optarg;
